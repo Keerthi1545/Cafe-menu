@@ -2,7 +2,7 @@
 
 main_course_menu = {
     "Italian Specialties": {
-        "White Sauce Pasta": 220,
+        "White Sauce Pasta": 300,
         "Red Sauce Pasta": 210,
         "Lasagna": 350,
         "Margherita Pizza": 300,
