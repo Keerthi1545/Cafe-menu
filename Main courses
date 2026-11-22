@@ -1,0 +1,83 @@
+# Main Course Menu
+
+main_course_menu = {
+    "Italian Specialties": {
+        "White Sauce Pasta": 220,
+        "Red Sauce Pasta": 210,
+        "Lasagna": 350,
+        "Margherita Pizza": 300,
+        "Chicken Alfredo Pasta": 280
+    },
+
+    "Mexican Specialties": {
+        "Chicken Tacos": 220,
+        "Veg Tacos": 180,
+        "Burrito Bowl": 250,
+        "Quesadilla": 240,
+        "Nachos Supreme": 200
+    },
+
+    "Burgers & Sandwiches": {
+        "Classic Burger": 180,
+        "Cheese Burger": 220,
+        "Chicken Burger": 250,
+        "Club Sandwich": 200,
+        "Grilled Chicken Sandwich": 260
+    },
+
+    "Grilled & Steak Dishes": {
+        "Grilled Chicken Steak": 450,
+        "Pepper Chicken Steak": 480,
+        "BBQ Chicken Platter": 520,
+        "Fish and Chips": 400
+    },
+
+    "Rice & Noodles": {
+        "Chicken Fried Rice": 250,
+        "Veg Fried Rice": 220,
+        "Chicken Hakka Noodles": 280,
+        "Veg Noodles": 240
+    }
+}
+
+print("\n" + "=" * 50)
+print("         MAIN COURSE MENU")
+print("=" * 50)
+
+for category, items in main_course_menu.items():
+    print(f"\n{category}")
+    print("-" * 50)
+
+    for item, price in items.items():
+        print(f"{item:<35} ₹{price}")
+
+print("\n" + "=" * 50)
+
+# Ordering Process
+total_bill = 0
+
+while True:
+    item_name = input("\nEnter main course item name: ")
+
+    found = False
+
+    for category in main_course_menu:
+        if item_name in main_course_menu[category]:
+            price = main_course_menu[category][item_name]
+            total_bill += price
+            print(f"{item_name} added to your order. ₹{price}")
+            found = True
+            break
+
+    if not found:
+        print("Item not found in Main Course Menu.")
+
+    choice = input("Add another item? (yes/no): ").lower()
+
+    if choice != "yes":
+        break
+
+print("\n" + "=" * 50)
+print(f"Total Main Course Bill: ₹{total_bill}")
+print("Thank you for dining with us!")
+print("=" * 50)
