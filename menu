@@ -130,7 +130,7 @@ function addToCart(name,price){
 <body>
 
 <header>
-<h1>☕ Cafe Bella Vista</h1>
+<h1>☕ EAT Full </h1>
 <p>Italian • Mexican • Burgers • Coffee • Desserts</p>
 </header>
 
